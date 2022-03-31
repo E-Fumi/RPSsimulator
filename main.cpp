@@ -14,7 +14,6 @@ bool isStringNumber(const string& str)
 
 int determineNrOfRounds(string roundsInput)
 {
-    int nrOfRounds;
     if (isStringNumber(roundsInput)) {
         if (stoi(roundsInput) > 0) {
             return stoi(roundsInput);
@@ -49,7 +48,6 @@ int encodePlayerInput(string playerInput)
 
 int determineChoice(int roundWin, int lastPlayerChoice)
 {
-    int algorithmChoice;
     switch(roundWin){
         case -1:
             return 1 + (lastPlayerChoice) % 3;
@@ -64,7 +62,6 @@ int determineChoice(int roundWin, int lastPlayerChoice)
 
 string choiceDecoder(int choice)
 {
-    string decodedChoice;
     switch(choice) {
         case 0:
             return "rock";
@@ -80,7 +77,6 @@ string choiceDecoder(int choice)
 
 int determineWin(int algorithmChoice, int playerChoice)
 {
-    int roundWin;
     if (algorithmChoice == playerChoice){
         cout << "\nIt's a tie.\n";
         return 0;
